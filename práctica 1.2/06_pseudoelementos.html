@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    	p::after {
+        		content: '\23F4'!important; /* https://www.compart.com/en/unicode/category/So */
+        		color: #e03574!important;
+        		font-size: 1.5em;
+    	}
+    	p::before {
+        		content: '\1F6C8'!important; /* https://www.compart.com/en/unicode/category/So */
+    	}
+    	p::first-letter {
+        		font-size: 200%;
+        		color: #8A2BE2;
+    	}
+    	p::first-line {
+        		font-family: sans-serif;
+    	}
+    	li::marker {
+        		content: '\23F5'!important; /* https://www.compart.com/en/unicode/category/So */
+        		color: #e03574!important;
+    	}
+    	li::selection {
+        		color: red;
+        		background: yellow;
+    	}
+
+		/* Modificación: elemento añadido */
+		ul li:last-child {
+			color: palegoldenrod;
+			background-color: indianred;
+		}
+
+
+	</style>
+</head>
+<body>
+   <p>Este primer párrafo es bastante importante. Y lo voy a hacer lo más largo posible ya que quiero que se remarque su primera línea. Y si no muestra varias líneas pues no lo vamos a notar.</p>
+   <ul>
+    	<li>Primer Elemento</li>
+    	<li>Segundo Elemento</li>
+    	<li>Tercer Elemento</li>
+   </ul>
+</body>
+</html>
