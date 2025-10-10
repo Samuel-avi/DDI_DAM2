@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <style>
+   
+body {
+  font-family: Arial, sans-serif;
+  color: blueviolet;
+  border: 1px dashed gray
+}
+
+.caja {
+  width: 200px;
+  height: 100px;
+  border: unset; /* Elimina la regla definida: equivale a 'initial' si no es heredable */
+  padding: 20px;
+  margin: 20px;
+  border: inherit; /* no ocurre por que los bordes no son heredables */
+
+  
+}
+
+h2 {
+  /* Camiado a initial*/
+  color: initial;   /* Fuerza a heredar el color del padre (body o contenedor) */
+}
+
+p {
+  color: inherit;   /* cambiado de initial a inherit */
+}
+
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Noticias</h2>
+    <article class="caja">
+      <p>Este es el contenido de la noticia 1.</p>
+    </article>
+    <article class="caja">
+      <p>Este es el contenido de la noticia 2.</p>
+    </article>
+  </section>
+</body>
+</html>
+
