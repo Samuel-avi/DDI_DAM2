@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Layout con Sidebar y Grid</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    height: 100vh;
+  }
+
+  header {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.5em;
+  }
+
+  aside {
+    grid-area: sidebar;
+    background: #ecf0f1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  aside button {
+    padding: 10px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  aside button:hover {
+    background: #2980b9;
+  }
+
+  main {
+    grid-area: main;
+    background: #f9f9f9;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    gap: 15px;
+    overflow-y: auto;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card p {
+    padding: 10px;
+  }
+
+  footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  @media (max-width: 700px) {
+    .contenedor {
+      grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr auto 50px;
+    }
+    header { line-height: 60px; }
+  }
+</style>
+</head>
+<body>
+  <div class="contenedor">
+    <header>Cabecera</header>
+
+    <aside>
+      <button>Botón 1</button>
+      <button>Botón 2</button>
+    </aside>
+
+    <main>
+      <div class="card">
+        <img src="https://picsum.photos/200/150">
+        <p>Tarjeta 1</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/151">
+        <p>Tarjeta 2</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/152">
+        <p>Tarjeta 3</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/153">
+        <p>Tarjeta 4</p>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/154">
+        <p>Tarjeta 5</p>
+      </div>
+    </main>
+
+    <footer>Pie de página</footer>
+  </div>
+</body>
+</html>
