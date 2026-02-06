@@ -1,0 +1,56 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(162, 182, 209);
+}
+
+.caja {
+  border: 1px solid #765c77;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 850px;
+  background-color: rgba(110, 139, 190, 0.783);
+}
+
+select,
+button {
+  padding: 8px;
+  margin-right: 6px;
+}
+
+.fila {
+  margin-bottom: 12px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+.pos {
+  font-size: 12px;
+  border: 1px solid #4d3e3e;
+  background-color: rgb(133, 109, 179);
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+
+.ok {
+  color: green;
+  font-weight: bold;
+}
+
+.bad {
+  color: darkred;
+  font-weight: bold;
+}
+
+#msg {
+  margin-top: 8px;
+  min-height: 20px;
+}
